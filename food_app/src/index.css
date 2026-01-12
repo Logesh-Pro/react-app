@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Theme tokens */
+@theme {
+  --color-primary: #f97316;
+
+  --font-sans: "Poppins", sans-serif;
+
+  --container-padding: 1rem;
+  --container-padding-sm: 2rem;
+  --container-padding-lg: 4rem;
+  --container-padding-xl: 5rem;
+  --container-padding-2xl: 6rem;
+  --animate-spin-slow: spin 20s linear infinite;
+}
+
+@layer components {
+  .container {
+    @apply container mx-auto;
+  }
+  .primary-btn {
+    @apply bg-primary text-white font-bold px-4 py-2 rounded-full;
+  }
+  .secondary-btn {
+    @apply bg-gray-300 text-white font-bold px-4 py-2 rounded-full;
+  }
+}
+@layer utilities {
+    .img-shadow {
+        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.4));
+    }
+}
